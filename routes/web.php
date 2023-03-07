@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\MenuItem;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/menu', function() {
-    return view('menu');
+    $menuItems = MenuItem::all();
+    return view('menu', [
+        'menuItems' => $menuItems
+    ]);
 });
