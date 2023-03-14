@@ -10,4 +10,6 @@ class Category extends Model
     protected $table = 'menu_categories';
     protected $guarded = [];
     use HasFactory;
+
+
 }

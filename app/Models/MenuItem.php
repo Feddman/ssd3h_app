@@ -11,6 +11,7 @@ class MenuItem extends Model
     protected $guarded = [];
     use HasFactory;
 
+    // relation methodes (iedere fk in de tabel menu_items krijgt een belongsTo methode met de gekoppelde model)
     public function category() {
         return $this->belongsTo(Category::class);
     }
